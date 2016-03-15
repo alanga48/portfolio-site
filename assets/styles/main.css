@@ -68,7 +68,7 @@ h1 {
 }
 
 h2 {
-	font-size: 225%;
+	font-size: 250%;
 }
 
 p, li, a {
@@ -108,8 +108,8 @@ p, li, a {
 .main-container {
 	background-color: rgba(255, 255, 255, 0.95);
     text-align: center;
-    margin: 75px;
-    padding: 65px;
+    margin: 100px 125px;
+    padding: 5% 10%;
     line-height: 75px;
     border-radius: 15px;
 }
@@ -140,4 +140,24 @@ p, li, a {
 hr {
 	background-color: #333f4a;
     height: 1px;
+}
+
+.img-column {
+	width: 40%;
+    float: left;
+    padding-right: 5%;
+}
+
+.about-column {
+	text-align: left;
+    line-height: 25px;
+}
+
+.about-column p {
+	font-size: 125%;
+}
+
+.amy-img { 
+    max-width: 100%;
+    border: 3px solid #E2F3FF;
 }
