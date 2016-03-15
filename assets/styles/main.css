@@ -50,9 +50,11 @@ table {
 /********* End Reset *************/
 
 body {
-	background-image: url("../../img/background.png");
+	text-align: center;
+	/*background-image: url("../../img/background.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: 100%;*/
 }
 h1, h2, li, a, p {
 	color: #333f4a;
@@ -71,15 +73,27 @@ h2 {
 	font-size: 250%;
 }
 
-p, li, a {
+p, li, a, small {
 	font-family: 'Oxygen', sans-serif;
+}
+
+.section {
+	padding-bottom: 10%;
+}
+
+.blue-highlight {
+	background-color: #92EDE6;
+}
+
+.strong {
+	font-weight: 700;
 }
 
 .navbar {
 	margin-top: 15px;
 	width: 100%;
 	text-align: center;
-	background-color: rgba(255, 255, 255, 0.95);
+/*	background-color: rgba(255, 255, 255, 0.95);*/
 	padding: 20px;
 }
 .navbar ul {
@@ -101,36 +115,44 @@ p, li, a {
 }
 
 .navbar ul li a:hover, .navbar ul li a:active {
-    color: #638DA7;
+    color: #616569;
     text-decoration: underline;
 }
 
 .main-container {
-	background-color: rgba(255, 255, 255, 0.95);
+	/*background-color: rgba(255, 255, 255, 0.95);*/
     text-align: center;
-    margin: 100px 125px;
-    padding: 5% 10%;
+    margin: 0 125px;
+/*    padding: 5% 10%;*/
     line-height: 75px;
     border-radius: 15px;
+    padding-top: 8%;
 }
 
 .intro {
 	height:100vh;
+	background-image: url("../../img/background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    line-height: 80px;
+    padding-top: 8%;
 }
 
 .button {
-	border: 2px solid #333f4a;
+	border: 3px solid #333f4a;
     padding: 15px 30px;
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 10px;
     font-weight: 700;
     border-radius: 3px;
+    background-color: white;
 }
 
 .button:active, .button:hover {
-	border: 2px solid #638DA7;
-    color: #638DA7;
+	border: 2px solid #616569;
+    color: #616569;
 }
 
 .more-info {
@@ -159,5 +181,21 @@ hr {
 
 .amy-img { 
     max-width: 100%;
-    border: 3px solid #E2F3FF;
+    border: 3px solid #92EDE6;
+    border-radius: 50%;
+}
+
+.skills-list ul li {
+	line-height: 20px;
+
+}
+
+#contact {
+	background-image: url("../../img/background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    background-position: bottom;
+    padding: 60px;
+    line-height: 85px;
 }
