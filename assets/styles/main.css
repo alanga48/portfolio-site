@@ -62,11 +62,13 @@ h1, h2, li, a, p {
 }
 
 h1, h2 {
-	font-family: 'Abril Fatface', cursive;
+	/*font-family: 'Abril Fatface', cursive;*/
+	font-family: 'Lato', sans-serif;
+	font-weight: 800;
 }
 
 h1 {
-	font-size: 390%;
+	font-size: 400%;
 }
 
 h2 {
@@ -81,8 +83,14 @@ p, li, a, small {
 	padding-bottom: 10%;
 }
 
+.section h2 {
+	padding-bottom: 5%;
+}
+
 .blue-highlight {
-	background-color: #92EDE6;
+/*	background-color: #92EDE6;*/
+    /*background-color: rgba(146, 237, 230, 0.76);*/
+    margin: 0 auto;
 }
 
 .strong {
@@ -131,12 +139,12 @@ p, li, a, small {
 
 .intro {
 	height:100vh;
-	background-image: url("../../img/background.png");
+	background-image: url("../../img/background3.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100%;
     line-height: 80px;
-    padding-top: 8%;
+    padding-top: 10%;
 }
 
 .button {
@@ -156,7 +164,7 @@ p, li, a, small {
 }
 
 .more-info {
-	padding: 5%;
+	padding: 2%;
 }
 
 hr {
@@ -187,15 +195,91 @@ hr {
 
 .skills-list ul li {
 	line-height: 20px;
+	font-weight: 700;
+}
 
+.skills-list div {
+	width: 20%;
+    display: inline-block;
+}
+
+.portfolio-item {
+	width: 100%;
+}
+
+.portfolio-item .img-container {
+	float: left;
+}
+
+.portfolio-item img {
+	border: 2px solid #E4FAF4;
+	max-width: 60%;
+}
+
+.portfolio-item .project-desc {
+	width: 70%;
+	float: right;
+	line-height: 35px;
+    text-align: left;
+}
+
+.portfolio-item:after {
+    clear: both;
+    content: " ";
+    display: block;
+}
+
+.more-work-available {
+	text-align: left;
+	font-size: 12px;
 }
 
 #contact {
-	background-image: url("../../img/background.png");
+	background-image: url("../../img/background3.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100%;
     background-position: bottom;
     padding: 60px;
     line-height: 85px;
+}
+
+#contact h2 {
+	padding-bottom: 0;
+}
+
+.email-input {
+	background: url("../../img/social/email.png") no-repeat scroll 0px 0px;
+}
+
+.phone-input {
+	background: url("../../img/social/phone.png") no-repeat scroll 0px 0px;
+}
+
+.email-input, .phone-input {
+    background-size: 70px;
+    padding-left: 100px;
+    border: 2px solid #333F4A;
+    border-radius: 3px;
+    height: 68px;
+    font-size: 24px;
+    background-color: rgba(255, 255, 255, 0.75);
+    color: #333F4A;
+}
+
+
+
+footer {
+	padding: 20px;
+}
+
+footer a img {
+	width: 30px;
+    vertical-align: middle;
+}
+
+footer p {
+	display: inline-block;
+    vertical-align: middle;
+    padding-right: 15px;
 }

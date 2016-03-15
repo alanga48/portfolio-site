@@ -4,7 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="assets/styles/main.css">
 		<link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
-		<script type="javascript" src="assets/scripts/main.js"></script>
+		<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 		<title>Amy Langa</title>
 	</head>
 	<body>
@@ -22,14 +22,20 @@
 	</div>
 
 	<div class="intro">
-			<h2><span class="blue-highlight">Hi, my name is Amy and I'm a</span></h2>
-			<h1><span class="blue-highlight">UX Designer &amp; Developer</span></h1>
-			<h2><span class="blue-highlight">based in Chicago, IL</span></h2>
+		<div class="test">
+			<div class="blue-highlight">
+				<h2>Hi, my name is Amy and I'm a</h2>
+				<h1>UX Designer &amp; Developer</h1>
+				<h2>based in Chicago, IL</h2>
+				<div class="more-info">
+					<a class="button" href="#about">Learn More</a>
+				</div>
 
-			<div class="more-info">
-				<a class="button" href="#about">Learn More</a>
 			</div>
+
+			
 		</div>
+	</div>
 
 	<div class="main-container">
 
@@ -55,16 +61,16 @@
 
 		<div id="skills"  class="section">
 			<h2><span class="blue-highlight">Skills</span></h2>
-			<ul class="skills-list">
-				<li>
+			<div class="skills-list">
+				<div>
 					<img src="img/icons/testing-icon.png" />
 					<ul>
 						<li>User Research</li>
 						<li>Usability Testing</li>
 						<li>Competitive Analysis</li>
 					</ul>
-				</li>
-				<li>
+				</div>
+				<div>
 					<img src="img/icons/touch-icon.png" />
 					<ul>
 						<li>Wireframing</li>
@@ -72,9 +78,9 @@
 						<li>Invision</li>
 						<li>Axure</li>
 					</ul>
-				</li>
+				</div>
 											
-				<li>
+				<div>
 					<img src="img/icons/visual-icon.png" />
 					<ul>
 						<li>Adobe Suite</li>
@@ -83,8 +89,8 @@
 						<li>HTML5</li>
 						<li>Bootstrap</li>
 					</ul>
-				</li>
-				<li>
+				</div>
+				<div>
 					<img src="img/icons/code-icon.png" />
 					<ul>
 						<li>Javascript &amp; jQuery</li>
@@ -92,41 +98,41 @@
 						<li>MVC</li>
 						<li>MySQL</li>
 					</ul>
-				</li>
-			</ul>
+				</div>
+			</div>
 		</div>
 
 		<div id="portfolio" class="section">
 			<h2><span class="blue-highlight">Portfolio*</span></h2>
 			<div class="portfolio-item">
-				<div>
+				<div class="img-container">
 					<img src="img/portfolio/taskly.png" />
 				</div>
-				<div>
+				<div class="project-desc">
 					<p class="strong">Taskly</p>
 					<p>Taskly is a fictional project management software application. In this three month UX project, 
 					I was in charge of everything, including competitor analysis, user testing, prototyping, and visual 
 					design. The final project is a development-ready design encompassing Taskly's MVP.</p>
 				</div>
 			</div>
-
-			<small>*More work and code samples available to share in person</small>
+			<p class="more-work-available">*More work and code samples available to share in person</p>
 		</div>
 	</div>
 	<div id="contact" class="section">
-			<h2><span class="blue-highlight">I'd love to hear from you!</span></h2>
-			<a href="#" class="button" onclick="window.open('mailto:alanga48@gmail.com');">Get in Touch</a>
-
-			<div class="social">
-				<ul>
-					<li><a href="http://www.behance.net/amylanga"><img src="img/social/behance.png"></a></li>
-					<li><a href="http://www.linkedin.com/in/amy-langa-3b8887105"><img src="img/social/linkedin.png"></li>
-					<li><a href="http://github.com/alanga48"><img src="img/social/github.png"></a></li>
-				</ul>
-			</div>
+		<h2><span class="blue-highlight">I'd love to hear from you!</span></h2>
+		<div>
+			<a href="mailto:alanga48@gmail.com"><input class="email-input" disabled="true" value="alanga48@gmail.com"/></a>
 		</div>
+		<div>
+			<input class="phone-input" disabled="true" value="720.234.8292"/>
+		</div>
+	</div>
 	</body>
 	<footer>
-		<small>&copy; Amy Langa 2016</small>
+		<script type="javascript" src="assets/scripts/main.js"></script>
+		<p>&copy; Amy Langa 2016</p>
+		<a href="http://www.behance.net/amylanga"><img src="img/social/behance.png" /></a>
+		<a href="http://www.linkedin.com/in/amy-langa-3b8887105"><img src="img/social/linkedin.png" /></a>
+		<a href="http://github.com/alanga48"><img src="img/social/github.png" /></a>
 	</footer>
 </html>
