@@ -51,10 +51,10 @@ table {
 
 body {
 	text-align: center;
-	/*background-image: url("../../img/background.png");
+	background-image: url("../../img/leaves-faded-neutrals.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100%;*/
+    background-size: 100%;
 }
 h1, h2, li, a, p {
 	color: #333f4a;
@@ -79,112 +79,116 @@ p, li, a, small {
 	font-family: 'Oxygen', sans-serif;
 }
 
-.section {
-	padding-bottom: 10%;
+a {
+	color: #EA116D;
+	text-decoration: none;
 }
 
-.section h2 {
-	padding-bottom: 5%;
-}
-
-.blue-highlight {
-/*	background-color: #92EDE6;*/
-    /*background-color: rgba(146, 237, 230, 0.76);*/
-    margin: 0 auto;
+a:active, a:hover, .intro a:hover, .intro a:active {
+	color: #9C0143;
 }
 
 .strong {
 	font-weight: 700;
 }
 
-.navbar {
-	margin-top: 15px;
-	width: 100%;
-	text-align: center;
-/*	background-color: rgba(255, 255, 255, 0.95);*/
-	padding: 20px;
-}
-.navbar ul {
-	list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar ul li {
-	display: inline-block;
-	text-transform: uppercase;
-	letter-spacing: 5px;
-	padding-right: 5%;
-}
-
-.navbar ul li a {
-	text-decoration: none;
-
-}
-
-.navbar ul li a:hover, .navbar ul li a:active {
-    color: #616569;
-    text-decoration: underline;
-}
-
-.main-container {
-	/*background-color: rgba(255, 255, 255, 0.95);*/
-    text-align: center;
-    margin: 0 125px;
-/*    padding: 5% 10%;*/
-    line-height: 75px;
-    border-radius: 15px;
-    padding-top: 8%;
-}
-
 .intro {
 	height:100vh;
-	background-image: url("../../img/background.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100%;
     line-height: 80px;
-    padding-top: 10%;
 }
 
-.button {
-	border: 3px solid #333f4a;
-    padding: 15px 30px;
+p.nav-links, .intro a, .intro p {
+	color: #EA116D;
+    font-weight: 800;
     text-transform: uppercase;
-    text-decoration: none;
     letter-spacing: 10px;
-    font-weight: 700;
-    border-radius: 3px;
-    background-color: white;
+    text-decoration: none;
+    font-size: 18px;
 }
 
-.button:active, .button:hover {
-	border: 2px solid #616569;
-    color: #616569;
+.section {
+  	background: linear-gradient( 
+  		to right, 
+  		rgba(23, 28, 33, 0.95) 0%, 
+  		rgba(51, 63, 74, 0.75) 50%, 
+  		rgba(255,255,255,1) 50%, 
+  		rgba(255,255,255,1) 100% 
+  	);
+  	height: 500px;
+  	height:100vh;
+}
+
+.section:nth-child(odd) {
+    background: linear-gradient( 
+    	to right, 
+    	rgba(255, 255, 255, 0.95) 0%, 
+    	rgba(51, 63, 74, 0) 50%, 
+    	rgb(51, 63, 74) 50%, 
+    	rgb(51, 63, 74) 100% );
+    );
+}
+
+.section:nth-child(odd) .right-section p {
+    color: white;
+}
+
+.section p.nav-links {
+	padding-top: 10%;
+}
+
+.left-section, .right-section{
+	display: inline-block;
+	height: inherit;
+	vertical-align: top;
+}
+
+.left-section {
+	width: 49%;
+}
+
+.block {
+  text-align: center;
+
+  /* May want to do this if there is risk the container may be narrower than the element inside */
+  white-space: nowrap;
+}
+ 
+/* The ghost, nudged to maintain perfect centering */
+.block:before {
+  content: '';
+  display: inline-block;
+  height: 35vh;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+.left-section img {
+	width: 50%;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.right-section {
+	padding: 5%;
+    width: 49%;
+    -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+    overflow: hidden;
+    overflow-y: scroll;
+    text-align: left;
+    line-height: 25px;
+    font-size: 125%;
 }
 
 .more-info {
 	padding: 2%;
 }
 
-hr {
-	background-color: #333f4a;
-    height: 1px;
-}
-
 .img-column {
 	width: 40%;
     float: left;
     padding-right: 5%;
-}
-
-.about-column {
-	text-align: left;
-    line-height: 25px;
-}
-
-.about-column p {
-	font-size: 125%;
 }
 
 .amy-img { 
@@ -232,20 +236,6 @@ hr {
 .more-work-available {
 	text-align: left;
 	font-size: 12px;
-}
-
-#contact {
-	background-image: url("../../img/background.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100%;
-    background-position: bottom;
-    padding: 60px;
-    line-height: 85px;
-}
-
-#contact h2 {
-	padding-bottom: 0;
 }
 
 .email-input {
