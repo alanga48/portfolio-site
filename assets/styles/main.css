@@ -56,7 +56,7 @@ html, body {
 body {
 	text-align: center;
 	margin: 0;
-	background-image: url("../../img/leaves-faded-neutrals.png");
+	background-image: url("../../img/leaves-faded-neutrals.jpg");
 	background-size: cover;
 	background-position: center center;
 }
@@ -79,28 +79,26 @@ h2 {
 }
 
 h3 {
-	font-size: 150%;
+	font-size: 100%;
 }
 
 p, li, a, small {
 	font-family: 'Lato', sans-serif;
+	font-size: 16px;
 }
 
 a {
-	color: #EA116D;
+	color: #FF549C;
 	text-decoration: none;
+	font-weight: 700;
 }
 
 a:active, a:hover, .intro a:hover, .intro a:active {
-	color: #9C0143;
+	color: #D41968;
 }
 
 .strong {
 	font-weight: 700;
-}
-
-.align-right{
-	text-align: right;
 }
 
 .intro {
@@ -109,7 +107,7 @@ a:active, a:hover, .intro a:hover, .intro a:active {
 }
 
 p.nav-links, .intro a, .intro p {
-	color: #EA116D;
+	color: #FF549C;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 10px;
@@ -139,8 +137,16 @@ p.nav-links, .intro a, .intro p {
     );
 }
 
-.section:nth-child(odd) .right-section p {
+.section:nth-child(odd) .right-section p, .section:nth-child(odd) .right-section h3 {
     color: white;
+}
+
+.section:nth-child(even) .left-section .nav-links, .section:nth-child(even) .left-section .nav-links a {
+	color: #FF549C;
+}
+
+.section:nth-child(even) .left-section .nav-links a:hover {
+	color: #D41968;
 }
 
 .section p.nav-links {
@@ -159,18 +165,19 @@ p.nav-links, .intro a, .intro p {
 
 .block {
   text-align: center;
-
-  /* May want to do this if there is risk the container may be narrower than the element inside */
   white-space: nowrap;
 }
  
-/* The ghost, nudged to maintain perfect centering */
 .block:before {
   content: '';
   display: inline-block;
   height: 35vh;
   vertical-align: middle;
-  margin-right: -0.25em; /* Adjusts for spacing */
+  margin-right: -0.25em;
+}
+
+.hidden {
+	display: none;
 }
 
 .left-section img {
@@ -180,7 +187,7 @@ p.nav-links, .intro a, .intro p {
 }
 
 .right-section {
-	padding: 5%;
+	padding: 4%;
     width: 49%;
     -moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -192,25 +199,21 @@ p.nav-links, .intro a, .intro p {
     font-size: 125%;
 }
 
+.right-section p, h3, ul, .portfolio-item .img-container {
+	padding-bottom: 3%;
+}
+
+.experience {
+	padding: 5% 0;
+}
+
 .more-info {
 	padding: 2%;
 }
 
-.img-column {
-	width: 40%;
-    float: left;
-    padding-right: 5%;
-}
-
-.amy-img { 
-    max-width: 100%;
-    border: 3px solid #92EDE6;
-    border-radius: 50%;
-}
-
-.skills-list ul li {
-	line-height: 20px;
-	font-weight: 700;
+.skills-list {
+	list-style: square;
+	padding-left: 5%;
 }
 
 .skills-list div {
@@ -222,20 +225,17 @@ p.nav-links, .intro a, .intro p {
 	width: 100%;
 }
 
-.portfolio-item .img-container {
-	float: left;
-}
-
-.portfolio-item img {
-	border: 2px solid #E4FAF4;
-	max-width: 60%;
+.portfolio-item .img-container img {
+	max-width: 100%;
 }
 
 .portfolio-item .project-desc {
-	width: 70%;
-	float: right;
 	line-height: 35px;
     text-align: left;
+}
+
+.portfolio-item .project-desc a.title {
+	font-size: 100%;
 }
 
 .portfolio-item:after {
@@ -249,26 +249,9 @@ p.nav-links, .intro a, .intro p {
 	font-size: 12px;
 }
 
-.email-input {
-	background: url("../../img/social/email.png") no-repeat scroll 0px 0px;
+.social img {
+	width: 10%;
 }
-
-.phone-input {
-	background: url("../../img/social/phone.png") no-repeat scroll 0px 0px;
-}
-
-.email-input, .phone-input {
-    background-size: 70px;
-    padding-left: 100px;
-    border: 2px solid #333F4A;
-    border-radius: 3px;
-    height: 68px;
-    font-size: 24px;
-    background-color: rgba(255, 255, 255, 0.75);
-    color: #333F4A;
-}
-
-
 
 footer {
 	padding: 20px;
