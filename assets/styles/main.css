@@ -49,20 +49,23 @@ table {
 
 /********* End Reset *************/
 
+html, body {
+	height: 100%;
+}
+
 body {
 	text-align: center;
+	margin: 0;
 	background-image: url("../../img/leaves-faded-neutrals.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100%;
+	background-size: cover;
+	background-position: center center;
 }
-h1, h2, li, a, p {
+h1, h2, h3, li, a, p {
 	color: #333f4a;
 
 }
 
-h1, h2 {
-	/*font-family: 'Abril Fatface', cursive;*/
+h1, h2, h3 {
 	font-family: 'Lato', sans-serif;
 	font-weight: 800;
 }
@@ -75,8 +78,12 @@ h2 {
 	font-size: 250%;
 }
 
+h3 {
+	font-size: 150%;
+}
+
 p, li, a, small {
-	font-family: 'Oxygen', sans-serif;
+	font-family: 'Lato', sans-serif;
 }
 
 a {
@@ -90,6 +97,10 @@ a:active, a:hover, .intro a:hover, .intro a:active {
 
 .strong {
 	font-weight: 700;
+}
+
+.align-right{
+	text-align: right;
 }
 
 .intro {
@@ -109,8 +120,8 @@ p.nav-links, .intro a, .intro p {
 .section {
   	background: linear-gradient( 
   		to right, 
-  		rgba(23, 28, 33, 0.95) 0%, 
-  		rgba(51, 63, 74, 0.75) 50%, 
+  		rgba(23, 28, 33, 0.75) 0%, 
+  		rgba(51, 63, 74, 0.95) 50%, 
   		rgba(255,255,255,1) 50%, 
   		rgba(255,255,255,1) 100% 
   	);
@@ -261,11 +272,7 @@ p.nav-links, .intro a, .intro p {
 
 footer {
 	padding: 20px;
-}
-
-footer a img {
-	width: 30px;
-    vertical-align: middle;
+	background-color: white;
 }
 
 footer p {
