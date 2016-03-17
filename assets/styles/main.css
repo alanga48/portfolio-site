@@ -296,7 +296,6 @@ footer p {
 	.right-section, .left-section {
 		width: 100%;
 		float: left;
-		height: 100vh;
 	}
 
 	.section, .section:nth-child(odd) {
@@ -335,5 +334,6 @@ footer p {
 
 	.left-section {
 		padding: 10% 0;
+		height: 100vh;
 	}
 }
