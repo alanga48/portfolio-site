@@ -51,6 +51,8 @@ table {
 
 html, body {
 	height: 100%;
+	color: #333f4a;
+	font-family: 'Lato', sans-serif;
 }
 
 body {
@@ -60,13 +62,8 @@ body {
 	background-size: cover;
 	background-position: center center;
 }
-h1, h2, h3, li, a, p {
-	color: #333f4a;
-
-}
 
 h1, h2, h3 {
-	font-family: 'Lato', sans-serif;
 	font-weight: 800;
 }
 
@@ -82,8 +79,7 @@ h3 {
 	font-size: 100%;
 }
 
-p, li, a, small {
-	font-family: 'Lato', sans-serif;
+p, li, a {
 	font-size: 16px;
 }
 
@@ -102,9 +98,11 @@ a:active, a:hover, .intro a:hover, .intro a:active {
 }
 
 .intro {
-	height:100vh;
-	min-height: 750px;
     line-height: 80px;
+    -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	min-height: 750px;
 }
 
 .intro p {
@@ -120,10 +118,6 @@ p.nav-links, .intro a, .intro p {
     font-size: 18px;
 }
 
-.intro .block:before {
-	height: 10vh;
-}
-
 .section {
   	background: linear-gradient( 
   		to right, 
@@ -132,14 +126,27 @@ p.nav-links, .intro a, .intro p {
   		rgba(255,255,255,1) 50%, 
   		rgba(255,255,255,1) 100% 
   	);
-  	height:100vh;
-  	min-height: 725px;
+  	background-image: -webkit-linear-gradient(
+		left, 
+		rgba(23, 28, 33, 0.75) 0%, 
+  		rgba(51, 63, 74, 0.95) 50%, 
+  		rgba(255,255,255,1) 50%, 
+  		rgba(255,255,255,1) 100% 
+	);
 }
 
 .section:nth-child(odd) {
     background: linear-gradient( 
     	to right, 
     	rgba(255, 255, 255, 0.95) 0%, 
+    	rgba(51, 63, 74, 0) 50%, 
+    	rgb(51, 63, 74) 50%, 
+    	rgb(51, 63, 74) 100% );
+    );
+
+	background-image: -webkit-linear-gradient(
+		left,
+		rgba(255, 255, 255, 0.95) 0%, 
     	rgba(51, 63, 74, 0) 50%, 
     	rgb(51, 63, 74) 50%, 
     	rgb(51, 63, 74) 100% );
@@ -162,31 +169,17 @@ p.nav-links, .intro a, .intro p {
 	padding-top: 10%;
 }
 
-.block {
-  text-align: center;
-  white-space: nowrap;
-}
- 
-.block:before {
-  content: '';
-  display: inline-block;
-  height: 35vh;
-  vertical-align: middle;
-  margin-right: -0.25em;
-}
-
 .hidden {
 	display: none;
 }
 
 .left-section, .right-section{
 	display: inline-block;
-	height: inherit;
 	vertical-align: top;
-}
-
-.left-section {
 	width: 49%;
+    -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .left-section img {
@@ -197,10 +190,6 @@ p.nav-links, .intro a, .intro p {
 
 .right-section {
 	padding: 4%;
-    width: 49%;
-    -moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
     text-align: left;
     line-height: 25px;
     font-size: 125%;
@@ -239,6 +228,7 @@ p.nav-links, .intro a, .intro p {
 
 .portfolio-item .img-container img {
 	max-width: 100%;
+	width: 100%;
 }
 
 .portfolio-item .project-desc {
@@ -292,10 +282,6 @@ footer p {
 		letter-spacing: 3px;
 	}
 
-	.intro .block:before {
-		height: 5vh;
-	}
-
 	.right-section, .left-section {
 		width: 100%;
 		float: left;
@@ -306,13 +292,16 @@ footer p {
 		background-size: cover;
 		background-position: center center;
 		float: left;
-		height: initial;
-		min-height: initial;
 	}
+
 	.section .left-section {
 		background: linear-gradient( 
 	  		to right, 
 	  		rgba(23, 28, 33, 0.75) 0%, 
+ 			rgba(51, 63, 74, 0.95) 50%
+ 		);
+ 		background-image: -webkit-linear-gradient(
+ 			left, rgba(23, 28, 33, 0.75) 0%, 
  			rgba(51, 63, 74, 0.95) 50%
  		);
 	}
@@ -323,6 +312,12 @@ footer p {
 			rgba(255, 255, 255, 0.95) 0%, 
 			rgba(51, 63, 74, 0) 50%
 		);
+
+		background-image: -webkit-linear-gradient(
+ 			left, 
+			rgba(255, 255, 255, 0.95) 0%, 
+			rgba(51, 63, 74, 0) 50%
+ 		);
 	}
 
 	.right-section {
@@ -337,6 +332,5 @@ footer p {
 
 	.left-section {
 		padding: 10% 0;
-		height: 100vh;
 	}
 }
