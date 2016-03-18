@@ -19,10 +19,10 @@ function adjustContainers() {
 	$('.intro, .right-section, .left-section').css('height', height);
 	if(width > 991) {
 		// $('.intro, .right-section, .left-section').css('height', height);
-		$('#about .right-section').css({'overflow':'hidden', 'overflow-y':'scroll'});
+		$('.right-section').css({'overflow':'hidden', 'overflow-y':'auto'});
 	} else {
 		$('.intro, .left-section').css('height', height);
-		$('#about .right-section').css({'overflow':'visible', 'height':'auto', 'overflow-y':'auto'});
+		$('.right-section').css({'overflow':'visible', 'height':'auto', 'overflow-y':'auto'});
 	}
 	$('.left-section .title').css('padding-top', + height / 3 + "px");
 	$('.intro').css('padding-top', + height / 10 + "px");
