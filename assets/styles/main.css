@@ -18,7 +18,7 @@ a, a:visited {
 	font-weight: 700;
 }
 
-a:active, a:hover, .intro a:hover, .intro a:active {
+a:active, a:hover, a:focus, .intro a:hover, .intro a:active, .intro a:focus {
 	color: #D41968;
 }
 
