@@ -14,13 +14,22 @@ $(document).ready( function() {
 });
 
 function adjustContainers() {
-	
 	var width = $(window).width();
 	var height = $(window).height();
-	$('.intro, .right-section, .left-section').css('height', height);
+	// $('.intro, .right-section, .left-section').css('height', height);
+
+	if(width > 991) {
+		$('.intro, .right-section, .left-section').css('height', height);
+	} else {
+		$('.intro, .left-section').css('height', height);
+		$('.right-section').css({'overflow':'visiable', 'height':'auto'});
+	}
+
 	
-	var sectionHeight = width > 768 ? height : $('.right-section').outerHeight() + $('.left-section').outerHeight();
-	$('.section').css('height', sectionHeight);
+	// var sectionHeight = width > 991 ? height : $('.right-section').outerHeight() + $('.left-section').outerHeight();
+	// $('.section').css('height', sectionHeight);
 	$('.left-section .title').css('padding-top', + height / 3 + "px");
 	$('.intro').css('padding-top', + height / 10 + "px");
 }
+
+	
