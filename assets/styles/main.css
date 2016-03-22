@@ -12,6 +12,10 @@ body {
 	background-position: center center;
 }
 
+p {
+    margin: 0 0 25px;
+}
+
 a, a:visited {
 	color: #FF549C;
 	text-decoration: none;
@@ -35,7 +39,7 @@ p.nav-links, .intro a, .intro p {
 	color: #FF549C;
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 10px;
+    letter-spacing: 8px;
     text-decoration: none;
     font-size: 18px;
 }
@@ -51,11 +55,11 @@ p.nav-links, .intro a, .intro p {
 	display: inline-block;
 }
 
-.contact-me {
+.with-space {
 	padding: 3% 0;
 }
 
-#about .left-section, #contact .left-section {
+#about .left-section, #process .left-section {
   	background: linear-gradient( 
   		to right, 
   		rgba(23, 28, 33, 0.75) 0%, 
@@ -70,7 +74,7 @@ p.nav-links, .intro a, .intro p {
 	);
 }
 
-#work .left-section {
+#work .left-section, #contact .left-section {
     background: linear-gradient( 
     	to right, 
     	rgba(255, 255, 255, 0.95) 0%, 
@@ -96,7 +100,7 @@ p.nav-links, .intro a, .intro p {
 	padding: 1% 0 3%
 }
 
-#about .right-section, #contact .right-section {
+#about .right-section, #process .right-section {
 	background-color: white;
 }
 
@@ -110,7 +114,7 @@ p.nav-links, .intro a, .intro p {
     border-radius: 50%;
 }
 
-#work .right-section {
+#work .right-section, #contact .right-section {
 	color: white;
 	background-color: #333f4a;
 }
@@ -125,19 +129,15 @@ p.nav-links, .intro a, .intro p {
 	width: 100%;
 }
 
-.portfolio-item .project-desc {
-	line-height: 35px;
-    text-align: left;
-}
-
-.portfolio-item .project-desc a.title {
-	font-size: 100%;
-}
-
 .portfolio-item:after {
     clear: both;
     content: " ";
     display: block;
+}
+
+.portfolio-links a {
+	padding-right: 25px;
+	white-space: nowrap;
 }
 
 .more-work-available {
@@ -181,9 +181,17 @@ footer p {
 	}
 }
 
-@media screen and (max-width:641px) and (min-height: 360px)  {
+@media screen and (min-width:992px) and (max-width: 1235px)  {  
+    p.nav-links {
+		letter-spacing: 5px;
+		text-decoration: none;
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width:640px) and (min-height: 360px)  {
 	p.nav-links, .intro a, .intro p {
-		font-size: 15px;
+		font-size: 14px;
 		line-height: 25px;
 		letter-spacing: 3px;
 	}
