@@ -43,7 +43,7 @@ a:active, a:hover, a:focus, .intro a:hover, .intro a:active, .intro a:focus {
     left: 3%;
     z-index: 999;
     padding: 10px 25px;
-    background-color: rgba(251,52,136,0.75);
+    background-color: rgba(251,52,136,1);
     text-transform: uppercase;
 }
 
@@ -52,7 +52,7 @@ a.to-top, a.to-top:visited {
 }
 
 .to-top:hover, .to-top:active {
-    background-color: rgba(212, 25, 104, 0.75);
+    background-color: rgba(212, 25, 104,1);
 }
 
 p.nav-links, .intro a, .intro p {
