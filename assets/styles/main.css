@@ -8,8 +8,9 @@ body {
 	text-align: center;
 	margin: 0;
 	background-image: url("../../img/leaves-faded-neutrals.jpg");
-	background-size: cover;
-	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center; 
 }
 
 p {
@@ -17,7 +18,7 @@ p {
 }
 
 a, a:visited {
-	color: #FF549C;
+	color: #FB3488;
 	text-decoration: none;
 	font-weight: 700;
 }
@@ -35,8 +36,27 @@ a:active, a:hover, a:focus, .intro a:hover, .intro a:active, .intro a:focus {
     height: auto;
 }
 
+.to-top {
+	display: none;
+	position: fixed;
+    top: 3%;
+    left: 3%;
+    z-index: 999;
+    padding: 10px 25px;
+    background-color: rgba(251,52,136,0.75);
+    text-transform: uppercase;
+}
+
+a.to-top, a.to-top:visited {
+	color: white;
+}
+
+.to-top:hover, .to-top:active {
+    background-color: rgba(212, 25, 104, 0.75);
+}
+
 p.nav-links, .intro a, .intro p {
-	color: #FF549C;
+	color: #FB3488;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 8px;
@@ -147,6 +167,10 @@ p.nav-links, .intro a, .intro p {
 
 .social img {
 	height: 35px;
+}
+
+.social a {
+	text-decoration: none;
 }
 
 footer {

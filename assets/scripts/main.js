@@ -1,21 +1,26 @@
 $(document).ready( function() {
 
+	width = $(window).width();
+	height = $(window).height();
+
 	adjustContainers();
 	$(window).resize(function(){
 	    adjustContainers();
+	});
+
+	$(window).scroll(function(){
+		$(window).scrollTop() >= height ? $('.to-top').fadeIn() : $('.to-top').fadeOut();
 	});
 	
 	$('.nav-links a').click( function(e) {
 		e.preventDefault();
 		var sectionId = $(this).attr('href');
-		$("html, body").animate({ scrollTop: $('.section'+sectionId).offset().top }, 750);
+		$("html, body").animate({ scrollTop: $(sectionId).offset().top }, 750);
 	})
 
 });
 
 function adjustContainers() {
-	var width = $(window).width();
-	var height = $(window).height();
 	$('.intro, .right-section, .left-section').css('height', height);
 	if(width > 991) {
 		// $('.intro, .right-section, .left-section').css('height', height);
