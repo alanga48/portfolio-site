@@ -25,10 +25,15 @@ a, a:visited {
 
 a:active, a:hover, a:focus, .intro a:hover, .intro a:active, .intro a:focus {
 	color: #D41968;
+	text-decoration: none;
 }
 
 .strong {
 	font-weight: 700;
+}
+
+.intro, .right-section, .left-section {
+	min-height: 650px;
 }
 
 .intro img {
@@ -55,12 +60,30 @@ a.to-top, a.to-top:visited {
     background-color: rgba(212, 25, 104,1);
 }
 
+.toggle-section {
+	width: 100%;
+    padding: 50px 0 25px 0;
+    background: rgba(255, 255, 255, 0.61);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    background: linear-gradient( 
+    	to bottom, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.95) 50% 
+    );
+}
+
+.toggle-section span {
+	display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
 p.nav-links, .intro a, .intro p {
 	color: #FB3488;
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 8px;
-    text-decoration: none;
+    letter-spacing: 5px;
     font-size: 18px;
 }
 
@@ -79,7 +102,7 @@ p.nav-links, .intro a, .intro p {
 	padding: 3% 0;
 }
 
-#about .left-section, #process .left-section {
+#about .left-section, #skills .left-section {
   	background: linear-gradient( 
   		to right, 
   		rgba(23, 28, 33, 0.75) 0%, 
@@ -120,18 +143,26 @@ p.nav-links, .intro a, .intro p {
 	padding: 1% 0 3%
 }
 
-#about .right-section, #process .right-section {
+#about .right-section, #skills .right-section {
 	background-color: white;
 }
 
-#about .right-section .img-container {
+/*#about .right-section .img-container {
 	text-align: center;
-}
+}*/
 
 #about .right-section img {
-	width: 300px;
-	max-width: 75%;
+	width: 200px;
+	max-width: 90%;
     border-radius: 50%;
+}
+
+#about .right-section .col-md-8 {
+	padding-left: 0px;
+}
+
+.section-copy {
+	padding-top: 5%;
 }
 
 #work .right-section, #contact .right-section {
@@ -140,8 +171,36 @@ p.nav-links, .intro a, .intro p {
 }
 
 .skills-list {
-	list-style: square;
-	padding-left: 10%;
+	text-align: center;
+	font-weight: 700;
+}
+
+.skills-list h3 {
+	width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-size: 16px;
+    line-height: 100px;
+    border: 2px solid #8094A7;
+    color: #8094A7;
+    margin: 0 auto 20px;
+    font-weight: 700;
+}
+
+.skills-list :nth-of-type(1) h3 {
+	border: 2px solid #FD9DAE;
+	color: #FD9DAE;
+}
+
+.skills-list :nth-of-type(2) h3 {
+	border: 2px solid #6ACAA7;
+	color: #6ACAA7;
+}
+
+.skills-list ul {
+	list-style: none;
+	padding: 0px;
+	font-size: 14px;
 }
 
 .portfolio-item .img-container img {
@@ -207,7 +266,6 @@ footer p {
 
 @media screen and (min-width:992px) and (max-width: 1235px)  {  
     p.nav-links {
-		letter-spacing: 5px;
 		text-decoration: none;
 		font-size: 14px;
 	}
