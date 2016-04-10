@@ -24,7 +24,7 @@ a, a:visited {
 }
 
 a:active, a:hover, a:focus, .intro a:hover, .intro a:active, .intro a:focus {
-	color: #D41968;
+	color: #FF8FBE;
 	text-decoration: none;
 }
 
@@ -136,7 +136,7 @@ p.nav-links, .intro a, .intro p {
 	padding: 4%;
     text-align: left;
     line-height: 25px;
-    font-size: 125%;
+    font-size: 115%;
 }
 
 .img-container {
@@ -181,13 +181,13 @@ p.nav-links, .intro a, .intro p {
     border-radius: 50%;
     font-size: 16px;
     line-height: 100px;
-    border: 2px solid #8094A7;
-    color: #8094A7;
+    border: 2px solid #333f4a;
+    color: #333f4a;
     margin: 0 auto 20px;
     font-weight: 700;
 }
 
-.skills-list :nth-of-type(1) h3 {
+/*.skills-list :nth-of-type(1) h3 {
 	border: 2px solid #FD9DAE;
 	color: #FD9DAE;
 }
@@ -195,7 +195,7 @@ p.nav-links, .intro a, .intro p {
 .skills-list :nth-of-type(2) h3 {
 	border: 2px solid #6ACAA7;
 	color: #6ACAA7;
-}
+}*/
 
 .skills-list ul {
 	list-style: none;

@@ -14,7 +14,7 @@ $(document).ready( function() {
 		$(window).scrollTop() >= height ? $('.to-top').fadeIn() : $('.to-top').fadeOut();
 	});
 	
-	$('.nav-links a').click( function(e) {
+	$('.nav-links, .nav-links a').click( function(e) {
 		e.preventDefault();
 		var sectionId = $(this).attr('href');
 		$("html, body").animate({ scrollTop: $(sectionId).offset().top }, 750);
@@ -27,14 +27,30 @@ $(document).ready( function() {
 		var toggleHeight = expanded ? skillsSectionHeight : height;
 		var html = expanded ? "Show Less <span class='glyphicon glyphicon-chevron-up'></span>" : "Show More <span class='glyphicon glyphicon-chevron-down'></span>";
 		$(this).html(html);
-		$("#skills .right-section, #skills .left-section").animate({
-			'height':toggleHeight
-		}, 750);
+		if(width > 991) {
+			$("#skills .right-section, #skills .left-section").animate({
+				'height':toggleHeight
+			}, 750);
+		} else {
+			$("#skills .right-section").animate({
+				'height':toggleHeight
+			}, 750);
+		}
+		
 	})
 });
 
 function adjustContainers() {
 	$('.intro, .right-section, .left-section').css('height', height);
+
+	// if(width > 991) {
+	// 	$('.right-section').css({'overflow':'hidden', 'overflow-y':'auto'});
+	// } else {
+	// 	$('.intro, .left-section').css('height', height);
+	// 	$('.right-section').css({'overflow':'visible', 'height':'auto', 'overflow-y':'auto'});
+	// }
+
+
 	if (height < skillsSectionHeight) {
 		$("#skills .right-section").append(
 			"<a href='#' class='toggle-section'>Show More <span class='glyphicon glyphicon-chevron-down'></span></a>");
