@@ -61,16 +61,12 @@ a.to-top, a.to-top:visited {
 }
 
 .toggle-section {
-	width: 100%;
-    padding: 50px 0 25px 0;
-    background: rgba(255, 255, 255, 0.61);
+    width: 100%;
+    height: 30px;
     position: absolute;
     bottom: 0;
     left: 0;
     text-align: center;
-    background: linear-gradient( 
-    	to bottom, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.95) 50% 
-    );
 }
 
 .toggle-section span {
@@ -133,7 +129,7 @@ p.nav-links, .intro a, .intro p {
 }
 
 .right-section {
-	padding: 4%;
+	padding: 5%;
     text-align: left;
     line-height: 25px;
     font-size: 115%;
@@ -146,10 +142,6 @@ p.nav-links, .intro a, .intro p {
 #about .right-section, #skills .right-section {
 	background-color: white;
 }
-
-/*#about .right-section .img-container {
-	text-align: center;
-}*/
 
 #about .right-section img {
 	width: 200px;
@@ -176,26 +168,18 @@ p.nav-links, .intro a, .intro p {
 }
 
 .skills-list h3 {
-	width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    font-size: 16px;
-    line-height: 100px;
-    border: 2px solid #333f4a;
+	margin: 0 auto;
+    font-size: 20px;
     color: #333f4a;
-    margin: 0 auto 20px;
     font-weight: 700;
 }
 
-/*.skills-list :nth-of-type(1) h3 {
-	border: 2px solid #FD9DAE;
-	color: #FD9DAE;
+.skills-list hr {
+	border-top: 2px solid #FB3488;
+    width: 75%;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
-
-.skills-list :nth-of-type(2) h3 {
-	border: 2px solid #6ACAA7;
-	color: #6ACAA7;
-}*/
 
 .skills-list ul {
 	list-style: none;
@@ -280,5 +264,9 @@ footer p {
 
 	.right-section {
 		padding: 10%;
+	}
+
+	.skills-list .col-sm-4 {
+		margin-bottom: 30px;
 	}
 }

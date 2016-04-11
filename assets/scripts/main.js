@@ -1,9 +1,6 @@
 $(document).ready( function() {
 
-	width = $(window).width();
 	height = $(window).height();
-	skillsSection = document.getElementById("skills");
-	skillsSectionHeight = skillsSection.scrollHeight;
 
 	adjustContainers();
 	$(window).resize(function(){
@@ -24,16 +21,25 @@ $(document).ready( function() {
 		e.preventDefault();
 		$(this).toggleClass('expanded');
 		var expanded = $(this).hasClass('expanded');
-		var toggleHeight = expanded ? skillsSectionHeight : height;
-		var html = expanded ? "Show Less <span class='glyphicon glyphicon-chevron-up'></span>" : "Show More <span class='glyphicon glyphicon-chevron-down'></span>";
-		$(this).html(html);
-		if(width > 991) {
+
+		// The height we are adjusting to is either the real height of the right 
+		// section (for expanded) or the height of the browser
+		var toggleHeight = expanded ? $('#skills .right-section')[0].scrollHeight : height;
+		
+		// Add the show/hide element
+		if(expanded) {
+			$(this).html("Show Less <span class='glyphicon glyphicon-chevron-up'></span>");
+		} else {
+			$(this).html("Show More <span class='glyphicon glyphicon-chevron-down'></span>");
+		}
+
+		if($(window).width() > 991) {
 			$("#skills .right-section, #skills .left-section").animate({
 				'height':toggleHeight
 			}, 750);
 		} else {
 			$("#skills .right-section").animate({
-				'height':toggleHeight
+				'height': toggleHeight
 			}, 750);
 		}
 		
@@ -41,21 +47,21 @@ $(document).ready( function() {
 });
 
 function adjustContainers() {
-	$('.intro, .right-section, .left-section').css('height', height);
 
-	// if(width > 991) {
-	// 	$('.right-section').css({'overflow':'hidden', 'overflow-y':'auto'});
-	// } else {
-	// 	$('.intro, .left-section').css('height', height);
-	// 	$('.right-section').css({'overflow':'visible', 'height':'auto', 'overflow-y':'auto'});
-	// }
+	// Make intro section the same height as the browser window
+	$('.intro').css('height', height);
 
+	// Make floated child divs in each section in same height
+	$('.section').each(function() {
+		$(this).find('.left-section').css({'height':$(this).find('.right-section').outerHeight()});
+	});
 
-	if (height < skillsSectionHeight) {
-		$("#skills .right-section").append(
-			"<a href='#' class='toggle-section'>Show More <span class='glyphicon glyphicon-chevron-down'></span></a>");
-	}
-	$('.right-section').css({'overflow':'hidden'});
+	// The skills section is very long so let's do some show/hide on desktop
+	$("#skills .right-section, #skills .left-section").css({'height':height,'overflow':'hidden'});
+	$('#skills .right-section').append(
+		"<a href='#' class='toggle-section'>Show More <span class='glyphicon glyphicon-chevron-down'></span></a>");
+
+	// Centering in dynamic height div
 	$('.left-section .title').css('padding-top', + height / 3 + "px");
 	$('.intro').css('padding-top', + height / 10 + "px");
 }
