@@ -28,6 +28,14 @@ a:active, a:hover, a:focus, .intro a:hover, .intro a:active, .intro a:focus {
 	text-decoration: none;
 }
 
+.intro a, .intro p, .intro p.nav-links, .left-section p.nav-links {
+	color: #FB3488;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 18px;
+}
+
 .strong {
 	font-weight: 700;
 }
@@ -37,8 +45,9 @@ a:active, a:hover, a:focus, .intro a:hover, .intro a:active, .intro a:focus {
 }
 
 .intro img {
-	max-width: 85% !important;
+	max-width: 400px;
     height: auto;
+    width: 85%;
 }
 
 .to-top {
@@ -48,7 +57,7 @@ a:active, a:hover, a:focus, .intro a:hover, .intro a:active, .intro a:focus {
     left: 3%;
     z-index: 999;
     padding: 10px 25px;
-    background-color: rgba(251,52,136,1);
+    background-color: rgba(251,52,136,.75);
     text-transform: uppercase;
 }
 
@@ -57,7 +66,7 @@ a.to-top, a.to-top:visited {
 }
 
 .to-top:hover, .to-top:active {
-    background-color: rgba(212, 25, 104,1);
+    background-color: rgba(212, 25, 104,.75);
 }
 
 .toggle-section {
@@ -67,6 +76,7 @@ a.to-top, a.to-top:visited {
     bottom: 0;
     left: 0;
     text-align: center;
+    background-color: white;
 }
 
 .toggle-section span {
@@ -75,20 +85,13 @@ a.to-top, a.to-top:visited {
     float: none;
 }
 
-p.nav-links, .intro a, .intro p {
-	color: #FB3488;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 18px;
-}
-
 .section p.nav-links {
-	padding-top: 10%;
+	padding-top: 5%;
 }
 
 
 .left-section img {
+	max-width: 300px;
 	width: 50%;
 	vertical-align: middle;
 	display: inline-block;
@@ -256,10 +259,10 @@ footer p {
 }
 
 @media screen and (max-width:640px) and (min-height: 360px)  {
-	p.nav-links, .intro a, .intro p {
+	.intro a, .intro p, .intro p.nav-links, .left-section p.nav-links {
 		font-size: 14px;
 		line-height: 25px;
-		letter-spacing: 3px;
+		letter-spacing: 1px;
 	}
 
 	.right-section {
