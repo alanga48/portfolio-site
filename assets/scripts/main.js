@@ -53,6 +53,7 @@ function adjustContainers() {
 		$('.intro').css('height', height);
 		// Make floated child divs in each section in same height
 		$('.section').each(function() {
+			// Set the left section height to the same height as the right section
 			$(this).find('.left-section').css({'height':$(this).find('.right-section').outerHeight()});
 		});
 	} else {

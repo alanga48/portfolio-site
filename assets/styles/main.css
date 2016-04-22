@@ -1,7 +1,7 @@
 html, body {
 	height: 100%;
 	color: #333f4a;
-	font-family: 'Lato', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
 body {
@@ -24,8 +24,12 @@ a, a:visited {
 }
 
 a:active, a:hover, a:focus, .intro a:hover, .intro a:active, .intro a:focus {
-	color: #AF1153;
+	color: #CE1E68;
 	text-decoration: none;
+}
+
+.btn {
+	 font-weight: 600;
 }
 
 .btn-primary, a.btn-primary {
